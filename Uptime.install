@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "icon": "fas fa-biohazard",
     "category": "information",
-    "author": "objective-cnut",
+    "author": "javajunky",
     "maintainers": [
-        "objective-cnut"
+        "javajunky"
     ],
     "desc": "Find the uptime",
     "aliceMinVersion": "1.0.0-b5",
