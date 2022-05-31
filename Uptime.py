@@ -16,7 +16,9 @@ class Uptime(AliceSkill):
 
 	@AnyExcept(exceptions=(KeyError), text='failed', printStack=True)
 	def getUptime(self,session: DialogSession):
+			self.logInfo("Calculating uptime.")
 			raw = subprocess.check_output('uptime').decode("utf8").split(" ")
+			self.logInfo(raw)
 			if raw[5] == "min":
 				answer = raw[4]+" minutes"
 			elif raw[5] == "days":
