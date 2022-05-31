@@ -1,0 +1,20 @@
+{
+    "name": "Uptime",
+    "version": "1.0.0",
+    "icon": "fas fa-biohazard",
+    "category": "information",
+    "author": "objective-cnut",
+    "maintainers": [
+        "objective-cnut"
+    ],
+    "desc": "Find the uptime",
+    "aliceMinVersion": "1.0.0-b5",
+    "systemRequirements": [],
+    "pipRequirements": [],
+    "conditions": {
+        "lang": [
+            "en"
+        ],
+        "online": false
+    }
+}

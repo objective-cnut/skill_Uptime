@@ -1,0 +1,16 @@
+{
+	"running": [
+		"Finding uptime now, I will be back in a moment"
+	],
+	"result": {
+		"default": [
+			"The uptime for project Alice is {}."
+		],
+		"short": [
+			"Uptime is {}"
+		]
+	},
+	"failed": [
+		"There was an error, I could not calculate your uptime, Sorry"
+	]
+}
