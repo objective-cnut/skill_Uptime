@@ -7,7 +7,7 @@ class Uptime(AliceSkill):
 	Author: Bobby C
 	Description: find out the uptime
 	"""
-	@IntentHandle("Uptime")
+	@IntentHandler("Uptime")
 
 	def runUptime(self, session: DialogSession):
 		self.ThreadManager.doLater(interval=0, func=self.getUptime, kwargs={'session': session})
