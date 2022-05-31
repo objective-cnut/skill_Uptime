@@ -1,4 +1,4 @@
-from core.base.mode.AliceSkill import AliceSkill
+from core.base.model.AliceSkill import AliceSkill
 from core.dialog.model.DialogSession import DialogSession
 from core.util.Decorators import AnyExcept, IntentHandler, Online
 import subprocess
