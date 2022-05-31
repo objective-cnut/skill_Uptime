@@ -14,7 +14,7 @@ class Uptime(AliceSkill):
 		self.logInfo("Finding uptime")
 		self.endDialog(sessionID=session.sessionId, text=self.randomTalk('running'))
 
-	@AnyExcept(exceptions=(UptimeException, KeyError), text='failed', printStack=True)
+	@AnyExcept(exceptions=(KeyError), text='failed', printStack=True)
 	def getUptime(self,session: DialogSession):
 			raw = subprocess.check_output('uptime').decode("utf8").split(" ")
 			if raw[5] == "min":
