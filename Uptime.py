@@ -19,7 +19,7 @@ class Uptime(AliceSkill):
 			raw = subprocess.check_output('uptime').decode("utf8").split(" ")
 			if raw[5] == "min":
 				answer = raw[4]+" minutes"
-			else if raw[5] == "days"
+			elif raw[5] == "days":
 				answer = raw[4]+" Days"
 			else:
 				answer = raw[4]+" Hours"
