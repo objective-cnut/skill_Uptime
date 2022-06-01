@@ -8,7 +8,7 @@
         "javajunky"
     ],
     "desc": "Find the uptime",
-    "aliceMinVersion": "1.0.0-b5",
+    "aliceMinVersion": "1.0.0-rc2",
     "systemRequirements": [],
     "pipRequirements": [],
     "conditions": {
