@@ -27,11 +27,11 @@ class Uptime(AliceSkill):
 			self.logInfo("Calculating uptime.")
 			raw = subprocess.check_output('uptime').decode("utf8").split(" ")
 			self.logDebug(raw)
-			if raw[5] == "min":
-				self.result = raw[4]+" minutes"
-			elif raw[5] == "days":
-				self.result = raw[4]+" Days"
+			if raw[4] == "min,":
+				self.result = raw[3]+" minutes"
+			elif raw[4] == "days":
+				self.result = raw[3]+" Days"
 			else:
-				self.result = raw[4]+" Hours"
+				self.result = raw[3]+" Hours"
 			self.logDebug(f'Uptime: {self.result}')
 			self.say(text=self.randomTalk(text='self.result', replace=[self.result]), deviceUid=session.deviceUid)
