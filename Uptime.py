@@ -7,6 +7,10 @@ class Uptime(AliceSkill):
 	Author: Bobby C
 	Description: find out the uptime
 	"""
+	def __init__(self):
+		self.result = ""
+		super().__init__()
+
 	@IntentHandler('Uptime')
 	@Online
 	def runUptime(self, session: DialogSession):
@@ -21,10 +25,10 @@ class Uptime(AliceSkill):
 			raw = subprocess.check_output('uptime').decode("utf8").split(" ")
 			self.logDebug(raw)
 			if raw[5] == "min":
-				answer = raw[4]+" minutes"
+				self.result = raw[4]+" minutes"
 			elif raw[5] == "days":
-				answer = raw[4]+" Days"
+				self.result = raw[4]+" Days"
 			else:
-				answer = raw[4]+" Hours"
-			self.logDebug(f'Uptime: {raw}')
-			self.say(text=self.randomTalk(text='raw', replace=[raw]), deviceUid=session.deviceUid)
+				self.result = raw[4]+" Hours"
+			self.logDebug(f'Uptime: {self.result}')
+			self.say(text=self.randomTalk(text='self.result', replace=[self.result]), deviceUid=session.deviceUid)
