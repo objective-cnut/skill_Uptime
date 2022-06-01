@@ -13,7 +13,7 @@ class Uptime(AliceSkill):
 
 	@IntentHandler('Uptime')
 	@Online
-	def runUptime(self, session: DialogSession):
+	def Uptime(self, session: DialogSession):
 		self.ThreadManager.doLater(interval=0, func=self.getUptime, kwargs={'session': session})
 		self.logDebug("Finding uptime")
 		self.endDialog(sessionID=session.sessionId, text=self.randomTalk('running'))
