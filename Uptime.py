@@ -11,6 +11,9 @@ class Uptime(AliceSkill):
 		self.result = ""
 		super().__init__()
 
+	def onStart(self):
+		super().onStart()
+		print("Starting.....")
 	@IntentHandler('Uptime')
 	@Online
 	def Uptime(self, session: DialogSession):
